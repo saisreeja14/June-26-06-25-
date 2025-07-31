@@ -1,29 +1,21 @@
 package domain;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Member {
-    private int memberId;
+	private int memberId;
     private String name;
     private String email;
-    private long mobile;
-    private Gender gender; // M / F
+    private String mobile;
+    private Gender gender; 
     private String address;
-    
-    
-	public Member(int memberId, String name, String email, long mobile, Gender gender, String address) {
-		super();
-		this.memberId = memberId;
-		this.name = name;
-		this.email = email;
-		this.mobile = mobile;
-		this.gender = gender;
-		this.address = address;
-	}
-	public int getMemberId() {
-		return memberId;
-	}
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
-	}
+    private String AddedBy;
+    private LocalDateTime dateAdded; 
+    public Member()
+    {
+    	
+    }
 	public String getName() {
 		return name;
 	}
@@ -33,13 +25,10 @@ public class Member {
 	public String getEmail() {
 		return email;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public long getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
-	public void setMobile(long mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 	public Gender getGender() {
@@ -54,6 +43,25 @@ public class Member {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-    
+	public int getMemberId() {
+		return memberId;
+	}
+	public void setId(int memberId) {
+		this.memberId = memberId;
+	}
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	public LocalDateTime getDateAdded() {
+		return dateAdded;
+	}
+	public void setDateAdded(LocalDateTime dateAdded) {
+		this.dateAdded = dateAdded;
+	}
+	public String getAddedBy() {
+		return AddedBy;
+	}
+	public void setAddedBy(String addedBy) {
+		AddedBy = addedBy;
+	}  
 }

@@ -1,6 +1,6 @@
 package domain;
-public enum BookStatus {
-    A, // Active
-    I  // Inactive
+public enum BookStatus { //naming
+    Active, 
+    Inactive
 }
 
